@@ -1,8 +1,9 @@
 {
   "name": "hexlet1timurmb",
-  "version": "1.0.0",
-  "description": "",
-  "main": "dist/index.js",
+  "version": "1.0.1",
+  "description": "console game - Brain games",
+  "keywords": "brain games hexlet",
+  "main": "",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "NODE_ENV=production babel src --out-dir dist --source-maps inline",
@@ -12,7 +13,7 @@
     "type": "git",
     "url": "git+https://github.com/timurmb/project-lvl1-s356.git"
   },
-  "author": "",
+  "author": "timur meirbekov",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/timurmb/project-lvl1-s356/issues"
@@ -22,8 +23,7 @@
     "@babel/cli": "^7.1.2",
     "@babel/core": "^7.1.2",
     "@babel/node": "^7.0.0",
-    "@babel/preset-env": "^7.1.0",
-    "@babel/preset-stage-0": "^7.0.0"
+    "@babel/preset-env": "^7.1.0"
   },
   "bin": {
     "brain-games": "dist/bin/brain-games.js"
