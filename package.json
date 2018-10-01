@@ -1,6 +1,6 @@
 {
   "name": "hexlet1timurmb",
-  "version": "1.0.1",
+  "version": "1.1.1",
   "description": "console game - Brain games",
   "keywords": "brain games hexlet",
   "main": "",
@@ -30,5 +30,8 @@
   },
   "files": [
     "dist"
-  ]
+  ],
+  "dependencies": {
+    "readline-sync": "^1.4.9"
+  }
 }
