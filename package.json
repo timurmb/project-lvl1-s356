@@ -1,8 +1,13 @@
 {
   "name": "hexlet1timurmb",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "console game - Brain games",
-  "keywords": "brain games hexlet",
+  "keywords": [
+    "console",
+    "game",
+    "brain",
+    "games"
+  ],
   "main": "",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
