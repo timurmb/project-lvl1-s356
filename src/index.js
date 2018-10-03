@@ -13,25 +13,25 @@ const askName = () => {
 // return random number 1-100
 const getRandom = () => Math.floor(Math.random() * 100 + 1);
 
-export const gameEven = (userName) => {
+export const gameEven = () => {
+  console.log('Answer "yes" if number even otherwise answer "no".');
+  const userName = askName();
+
   const lossMessage = `Let's try again, ${userName}!`;
-  let counter = 1;
-  while (counter <= 3) {
-    const number = getRandom();
-    console.log(`Question: ${number}`);
+  const numberOfRounds = 3;
+  for (let round = 1; round <= numberOfRounds; round += 1) {
+    const question = getRandom();
+    console.log(`Question: ${question}`);
     const answer = readlineSync.question('Your answer: ');
-    if (number % 2 === 0 && answer !== 'yes') {
-      console.log(`${answer} is wrong answer ;(. Correct answer was "yes".`);
-      console.log(lossMessage);
-      return;
-    }
-    if (number % 2 === 1 && answer !== 'no') {
-      console.log(`${answer} is wrong answer ;(. Correct answer was "no".`);
+    let correctAnswer;
+    if (question % 2 === 0) correctAnswer = 'yes';
+    if (question % 2 === 1) correctAnswer = 'no';
+    if (answer !== correctAnswer) {
+      console.log(`${answer} is wrong answer ;(. Correct answer was ${correctAnswer}.`);
       console.log(lossMessage);
       return;
     }
     console.log('Correct!');
-    counter += 1;
   }
   console.log(`Congratulations, ${userName}!`);
 };
