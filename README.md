@@ -3,4 +3,4 @@
 [![Build Status](https://travis-ci.org/timurmb/project-lvl1-s356.svg?branch=master)](https://travis-ci.org/timurmb/project-lvl1-s356)
 
 ## Setup and Start game
-[![asciicast](https://asciinema.org/a/lyTfDGjOVjIRv3TZJISkc51o1?speed=2.png)](https://asciinema.org/a/lyTfDGjOVjIRv3TZJISkc51o1?speed=2)
+[![asciicast](https://asciinema.org/a/lyTfDGjOVjIRv3TZJISkc51o1.png)](https://asciinema.org/a/lyTfDGjOVjIRv3TZJISkc51o1?speed=2)
