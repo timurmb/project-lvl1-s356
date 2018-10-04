@@ -15,10 +15,7 @@ const askName = () => {
 // return random number 1-100
 const getRandom = () => Math.floor(Math.random() * 100 + 1);
 
-const isEven = (number) => {
-  if (number % 2 === 0) return true;
-  return false;
-};
+const isEven = number => (number % 2 === 0);
 
 export const gameEven = () => {
   greeting();
