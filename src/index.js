@@ -13,9 +13,7 @@ const askName = () => {
 };
 
 // return random number from 1 to 'max'
-const getRandom = (max = 100) => {
-  return Math.floor(Math.random() * max + 1);
-};
+const getRandom = (max = 100) => Math.floor(Math.random() * max + 1);
 
 const isEven = number => (number % 2 === 0);
 
