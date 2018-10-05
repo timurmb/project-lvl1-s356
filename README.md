@@ -7,3 +7,6 @@
 
 ## Start the game 'brain-calc'
 [![asciicast](https://asciinema.org/a/DCOPaGR3AcUSi1t7u4apjhZ1P.png)](https://asciinema.org/a/DCOPaGR3AcUSi1t7u4apjhZ1P?speed=3)
+
+## Start the game 'brain-gcd'
+[![asciicast](https://asciinema.org/a/ZFX5dzOJ3VgMyRWnfwykavOQ5.png)](https://asciinema.org/a/ZFX5dzOJ3VgMyRWnfwykavOQ5?speed=3)
