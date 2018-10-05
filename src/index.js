@@ -54,47 +54,17 @@ const congrat = (userName) => {
   console.log(`Congratulations, ${userName}!`);
 };
 
-// export const gameEven = () => {
-//   greeting();
-//   console.log('Answer "yes" if number even otherwise answer "no".');
-//   const userName = askName();
-
-//   for (let round = 1; round <= numberOfRounds; round += 1) {
-//     const question = getRandom();
-//     console.log(`Question: ${question}`);
-//     const answer = readlineSync.question('Your answer: ');
-//     const correctAnswer = isEven(question) ? 'yes' : 'no';
-//     if (check(answer, correctAnswer, userName) === false) return;
-//   }
-//   congrat(userName);
-// };
-
-// export const gameCalc = () => {
-//   greeting();
-//   console.log('What is the result of the expression?');
-//   const userName = askName();
-
-//   for (let round = 1; round <= numberOfRounds; round += 1) {
-//     const operation = getOperation();
-//     const num1 = getRandom(10);
-//     const num2 = getRandom(10);
-//     const question = `${num1} ${operation.symb} ${num2}`;
-//     console.log(`Question: ${question}`);
-//     const answer = readlineSync.question('Your answer: ');
-//     const correctAnswer = operation.oper(num1, num2).toString();
-//     if (check(answer, correctAnswer, userName) === false) return;
-//   }
-//   congrat(userName);
-// };
-
 export const engine = (data) => {
   greeting();
-  console.log(data.rules);
+  console.log(data.description);
   const userName = askName();
   for (let round = 0; round < numberOfRounds; round += 1) {
-    console.log(`Question: ${data.questions[round]}`);
+    const QA = data.QAGenerator();
+    const question = QA.question;
+    const correctAnswer = QA.correctAnswer;
+    console.log(`Question: ${question}`);
     const answer = readlineSync.question('Your answer: ');
-    if (check(answer, data.correctAnswers[round], userName) === false) return;
+    if (check(answer, correctAnswer, userName) === false) return;
   }
   congrat(userName);
 };

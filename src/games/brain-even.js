@@ -1,16 +1,13 @@
-import { numberOfRounds, getRandom, isEven, engine } from '..';
+import { getRandom, isEven, engine } from '..';
 
 const gameEven = () => {
-  const rules = 'Answer "yes" if number even otherwise answer "no".';
-  const questions = [];
-  const correctAnswers = [];
-  for (let round = 0; round < numberOfRounds; round += 1) {
+  const description = 'Answer "yes" if number even otherwise answer "no".';
+  const QAGenerator = () => {
     const question = getRandom();
     const correctAnswer = isEven(question) ? 'yes' : 'no';
-    questions.push(`${question}`);
-    correctAnswers.push(correctAnswer);
-  }
-  const data = { rules, questions, correctAnswers };
+    return { question: question.toString(), correctAnswer };
+  };
+  const data = { description, QAGenerator };
   engine(data);
 };
 
