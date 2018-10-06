@@ -10,3 +10,6 @@
 
 ## Start the game 'brain-gcd'
 [![asciicast](https://asciinema.org/a/ZFX5dzOJ3VgMyRWnfwykavOQ5.png)](https://asciinema.org/a/ZFX5dzOJ3VgMyRWnfwykavOQ5?speed=3)
+
+## Start the game 'brain-progression'
+[![asciicast](https://asciinema.org/a/OWIsg9nd55vFO4uGOVpEdiYkt.png)](https://asciinema.org/a/OWIsg9nd55vFO4uGOVpEdiYkt?speed=3)
