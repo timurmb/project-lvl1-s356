@@ -1,32 +1,41 @@
-import { getRandom, getOperation, engine } from '..';
+import engine from '..';
+import getRandom from '../utils';
 
-// const gameCalc = () => {
-//   const description = 'What is the result of the expression?';
-//   const questions = [];
-//   const correctAnswers = [];
-//   for (let round = 0; round < numberOfRounds; round += 1) {
-//     const operation = getOperation();
-//     const num1 = getRandom(10);
-//     const num2 = getRandom(10);
-//     questions.push(`${num1} ${operation.symb} ${num2}`);
-//     correctAnswers.push(operation.oper(num1, num2).toString());
-//   }
-//   const data = { description, questions, correctAnswers };
-//   engine(data);
-// };
+const description = 'What is the result of the expression?';
+
+const getOperation = () => {
+  const selector = getRandom(3);
+  let operation;
+  let operationAsSymbol;
+  switch (selector) {
+    case 1:
+      operation = (num1, num2) => num1 + num2;
+      operationAsSymbol = '+';
+      break;
+    case 2:
+      operation = (num1, num2) => num1 - num2;
+      operationAsSymbol = '-';
+      break;
+    case 3:
+      operation = (num1, num2) => num1 * num2;
+      operationAsSymbol = '*';
+      break;
+    default:
+      break;
+  }
+  return { oper: operation, symb: operationAsSymbol };
+};
 
 const gameCalc = () => {
-  const description = 'What is the result of the expression?';
-  const QAGenerator = () => {
+  const generateQuestionAndAnswer = () => {
     const operation = getOperation();
     const num1 = getRandom(10);
     const num2 = getRandom(10);
     const question = (`${num1} ${operation.symb} ${num2}`);
     const correctAnswer = operation.oper(num1, num2).toString();
-    return { question, correctAnswer };
+    return { q: question, a: correctAnswer };
   };
-  const data = { description, QAGenerator };
-  engine(data);
+  engine(description, generateQuestionAndAnswer);
 };
 
 export default gameCalc;

@@ -1,5 +1,4 @@
 #!/usr/bin/env node
-import askName, { greeting } from '..';
+import engine from '..';
 
-greeting();
-askName();
+engine();
