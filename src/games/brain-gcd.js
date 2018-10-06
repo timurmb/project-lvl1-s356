@@ -1,10 +1,10 @@
-import { numberOfRounds, getRandom, engine } from '..';
+import engine from '..';
+import getRandom from '../utils';
+
+const description = 'Find the greatest common divisor of given numbers.';
 
 const gameGcd = () => {
-  const rules = 'Find the greatest common divisor of given numbers.';
-  const questions = [];
-  const correctAnswers = [];
-  for (let round = 0; round < numberOfRounds; round += 1) {
+  const generateQuestionAndAnswer = () => {
     const num1 = getRandom();
     const num2 = getRandom();
 
@@ -15,11 +15,11 @@ const gameGcd = () => {
       divisor += 1;
     }
 
-    questions.push(`${num1} ${num2}`);
-    correctAnswers.push(gcd.toString());
-  }
-  const data = { rules, questions, correctAnswers };
-  engine(data);
+    const question = `${num1} ${num2}`;
+    const correctAnswer = gcd.toString();
+    return { q: question, a: correctAnswer };
+  };
+  engine(description, generateQuestionAndAnswer);
 };
 
 export default gameGcd;

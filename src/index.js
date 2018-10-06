@@ -16,8 +16,10 @@ const engine = (description = '', generateQuestionAndAnswer) => {
     const questionAndAnswer = generateQuestionAndAnswer();
     const question = questionAndAnswer.q;
     const correctAnswer = questionAndAnswer.a;
+
     console.log(`Question: ${question}`);
     const answer = readlineSync.question('Your answer: ');
+
     if (answer !== correctAnswer) {
       console.log(`${answer} is wrong answer ;(. Correct answer was ${correctAnswer}.`);
       console.log(`Let's try again, ${userName}!`);
