@@ -13,3 +13,6 @@
 
 ## Start the game 'brain-progression'
 [![asciicast](https://asciinema.org/a/OWIsg9nd55vFO4uGOVpEdiYkt.png)](https://asciinema.org/a/OWIsg9nd55vFO4uGOVpEdiYkt?speed=3)
+
+## Start the game 'brain-prime'
+[![asciicast](https://asciinema.org/a/BzhZt6Ejp3dLs1GoJs7VijkKx.png)](https://asciinema.org/a/BzhZt6Ejp3dLs1GoJs7VijkKx?speed=3)
