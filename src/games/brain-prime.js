@@ -11,7 +11,7 @@ const isPrime = (number) => {
   return true;
 };
 
-const gameProgression = () => {
+const gamePrime = () => {
   const generateQuestionAndAnswer = () => {
     const number = getRandom();
     const question = number.toString();
@@ -21,4 +21,4 @@ const gameProgression = () => {
   engine(description, generateQuestionAndAnswer);
 };
 
-export default gameProgression;
+export default gamePrime;
