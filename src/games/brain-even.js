@@ -9,7 +9,7 @@ const gameEven = () => {
   const generateQuestionAndAnswer = () => {
     const question = getRandom();
     const correctAnswer = isEven(question) ? 'yes' : 'no';
-    return { q: question.toString(), a: correctAnswer };
+    return { question: question.toString(), correctAnswer };
   };
   engine(description, generateQuestionAndAnswer);
 };

@@ -19,7 +19,7 @@ const gameGcd = () => {
     const num2 = getRandom();
     const question = `${num1} ${num2}`;
     const correctAnswer = findGCD(num1, num2).toString();
-    return { q: question, a: correctAnswer };
+    return { question, correctAnswer };
   };
   engine(description, generateQuestionAndAnswer);
 };
