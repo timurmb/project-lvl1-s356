@@ -13,13 +13,13 @@ const engine = (description = '', generateQuestionAndAnswer) => {
   console.log(description);
   const userName = askName();
   for (let round = 0; round < numberOfRounds; round += 1) {
-    const questionAndAnswer = generateQuestionAndAnswer();
+    const { question, correctAnswer } = generateQuestionAndAnswer();
 
-    console.log(`Question: ${questionAndAnswer.question}`);
+    console.log(`Question: ${question}`);
     const answer = readlineSync.question('Your answer: ');
 
-    if (answer !== questionAndAnswer.correctAnswer) {
-      console.log(`${answer} is wrong answer ;(. Correct answer was ${questionAndAnswer.correctAnswer}.`);
+    if (answer !== correctAnswer) {
+      console.log(`${answer} is wrong answer ;(. Correct answer was ${correctAnswer}.`);
       console.log(`Let's try again, ${userName}!`);
       return;
     }
