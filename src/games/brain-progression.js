@@ -12,20 +12,21 @@ const getProgression = (firstElem, step, length) => {
   return progression;
 };
 
+const generateQuestionAndAnswer = () => {
+  const firstElem = getRandom(1, 10);
+  const step = getRandom(1, 10);
+
+  const arr = getProgression(firstElem, step, progressionLength);
+  const elementForReplace = getRandom(1, progressionLength) - 1;
+  const correctAnswer = arr[elementForReplace].toString();
+
+  arr.splice(elementForReplace, 1, '..');
+  const question = arr.join(' ');
+
+  return { question, correctAnswer };
+};
+
 const gameProgression = () => {
-  const generateQuestionAndAnswer = () => {
-    const firstElem = getRandom(1, 10);
-    const step = getRandom(1, 10);
-
-    const arr = getProgression(firstElem, step, progressionLength);
-    const elementForReplace = getRandom(1, progressionLength) - 1;
-    const correctAnswer = arr[elementForReplace].toString();
-
-    arr.splice(elementForReplace, 1, '..');
-    const question = arr.join(' ');
-
-    return { question, correctAnswer };
-  };
   engine(description, generateQuestionAndAnswer);
 };
 

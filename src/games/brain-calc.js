@@ -26,15 +26,16 @@ const getOperation = () => {
   return { oper: operation, symb: operationAsSymbol };
 };
 
+const generateQuestionAndAnswer = () => {
+  const operation = getOperation();
+  const num1 = getRandom(1, 10);
+  const num2 = getRandom(1, 10);
+  const question = (`${num1} ${operation.symb} ${num2}`);
+  const correctAnswer = operation.oper(num1, num2).toString();
+  return { question, correctAnswer };
+};
+
 const gameCalc = () => {
-  const generateQuestionAndAnswer = () => {
-    const operation = getOperation();
-    const num1 = getRandom(1, 10);
-    const num2 = getRandom(1, 10);
-    const question = (`${num1} ${operation.symb} ${num2}`);
-    const correctAnswer = operation.oper(num1, num2).toString();
-    return { question, correctAnswer };
-  };
   engine(description, generateQuestionAndAnswer);
 };
 

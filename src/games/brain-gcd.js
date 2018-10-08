@@ -13,14 +13,15 @@ const findGCD = (num1, num2) => {
   return gcd;
 };
 
+const generateQuestionAndAnswer = () => {
+  const num1 = getRandom();
+  const num2 = getRandom();
+  const question = `${num1} ${num2}`;
+  const correctAnswer = findGCD(num1, num2).toString();
+  return { question, correctAnswer };
+};
+
 const gameGcd = () => {
-  const generateQuestionAndAnswer = () => {
-    const num1 = getRandom();
-    const num2 = getRandom();
-    const question = `${num1} ${num2}`;
-    const correctAnswer = findGCD(num1, num2).toString();
-    return { question, correctAnswer };
-  };
   engine(description, generateQuestionAndAnswer);
 };
 

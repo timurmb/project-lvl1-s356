@@ -11,13 +11,14 @@ const isPrime = (number) => {
   return true;
 };
 
+const generateQuestionAndAnswer = () => {
+  const number = getRandom();
+  const question = number.toString();
+  const correctAnswer = isPrime(number) ? 'yes' : 'no';
+  return { question, correctAnswer };
+};
+
 const gamePrime = () => {
-  const generateQuestionAndAnswer = () => {
-    const number = getRandom();
-    const question = number.toString();
-    const correctAnswer = isPrime(number) ? 'yes' : 'no';
-    return { question, correctAnswer };
-  };
   engine(description, generateQuestionAndAnswer);
 };
 
